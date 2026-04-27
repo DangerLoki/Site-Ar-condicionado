@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ale Ar-condicionado — Instalação e Manutenção em São Paulo</title>
+    <meta name="description" content="Ale Ar-condicionado: especialistas em instalação, manutenção e higienização de ar condicionado em São Paulo. Atendimento rápido via WhatsApp." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="static/css/style.css" />
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container navbar__inner">
+            <a href="#" class="navbar__logo">
+                ❄️ <span>Ale Ar-condicionado</span>
+            </a>
+            <nav class="navbar__links">
+                <a href="#servicos">Serviços</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#depoimentos">Depoimentos</a>
+                <a href="#contato">Contato</a>
+            </nav>
+            <a href="https://wa.me/5511961056924?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20ar%20condicionado." target="_blank" class="btn btn--whatsapp navbar__cta">
+                <img src="static/img/whatsapp.svg" alt="WhatsApp" width="20" />
+                Falar no WhatsApp
+            </a>
+            <button class="navbar__toggle" onclick="toggleMenu()">&#9776;</button>
+        </div>
+        <nav class="navbar__mobile" id="mobileMenu">
+            <a href="#servicos" onclick="toggleMenu()">Serviços</a>
+            <a href="#sobre" onclick="toggleMenu()">Sobre</a>
+            <a href="#depoimentos" onclick="toggleMenu()">Depoimentos</a>
+            <a href="#contato" onclick="toggleMenu()">Contato</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero__bg"></div>
+        <div class="container hero__content">
+            <p class="hero__tag">📍 Atendemos toda a Grande SP</p>
+            <h1 class="hero__title">
+                Ar Condicionado com<br />
+                <span>Qualidade e Rapidez</span>
+            </h1>
+            <p class="hero__subtitle">
+                Instalação, manutenção, higienização e recarga de gás.<br />
+                Técnicos certificados, atendimento ágil e preço justo.
+            </p>
+            <div class="hero__actions">
+                <a href="https://wa.me/5511961056924?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20ar%20condicionado." target="_blank" class="btn btn--whatsapp btn--lg">
+                    <img src="static/img/whatsapp.svg" alt="WhatsApp" width="24" />
+                    Solicitar Orçamento Grátis
+                </a>
+                <a href="#servicos" class="btn btn--outline btn--lg">Ver Serviços</a>
+            </div>
+            <div class="hero__badges">
+                <div class="badge">✅ Resposta em até 15min</div>
+                <div class="badge">✅ Garantia nos serviços</div>
+                <div class="badge">✅ Mais de 5.000+ clientes</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="section services" id="servicos">
+        <div class="container">
+            <div class="section__header">
+                <h2>Nossos Serviços</h2>
+                <p>Soluções completas em climatização para residências e empresas</p>
+            </div>
+            <div class="services__grid">
+                
+                <div class="service-card">
+                    <div class="service-card__icon">❄️</div>
+                    <h3>Instalação</h3>
+                    <p>Instalação profissional de aparelhos Split, Cassete, Janela e Piso-Teto com equipamentos e mão de obra de alta qualidade.</p>
+                    <a href="https://wa.me/5511961056924?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20ar%20condicionado." target="_blank" class="service-card__link">
+                        Solicitar →
+                    </a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">🔧</div>
+                    <h3>Manutenção Preventiva</h3>
+                    <p>Revisão completa para garantir o funcionamento eficiente e prolongar a vida útil do seu equipamento.</p>
+                    <a href="https://wa.me/5511961056924?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20ar%20condicionado." target="_blank" class="service-card__link">
+                        Solicitar →
+                    </a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">🛠️</div>
+                    <h3>Manutenção Corretiva</h3>
+                    <p>Diagnóstico rápido e reparo de qualquer falha no seu ar condicionado, com peças originais e garantia.</p>
+                    <a href="https://wa.me/5511961056924?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20ar%20condicionado." target="_blank" class="service-card__link">
+                        Solicitar →
+                    </a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">🧹</div>
+                    <h3>Limpeza e Higienização</h3>
+                    <p>Higienização completa com produtos bactericidas, eliminando fungos, bactérias e ácaros do seu equipamento.</p>
+                    <a href="https://wa.me/5511961056924?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20ar%20condicionado." target="_blank" class="service-card__link">
+                        Solicitar →
+                    </a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">♻️</div>
+                    <h3>Recarga de Gás</h3>
+                    <p>Recarga de fluido refrigerante R-22, R-410A e R-32 por técnicos certificados.</p>
+                    <a href="https://wa.me/5511961056924?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20ar%20condicionado." target="_blank" class="service-card__link">
+                        Solicitar →
+                    </a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">🏢</div>
+                    <h3>Projetos Comerciais</h3>
+                    <p>Projetos completos de climatização para escritórios, lojas, restaurantes e galpões industriais.</p>
+                    <a href="https://wa.me/5511961056924?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20ar%20condicionado." target="_blank" class="service-card__link">
+                        Solicitar →
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="section about" id="sobre">
+        <div class="container about__inner">
+            <div class="about__text">
+                <p class="section__tag">Sobre nós</p>
+                <h2>Mais de 10+ anos cuidando do seu conforto em SP</h2>
+                <p>
+                    A <strong>Ale Ar-condicionado</strong> é uma empresa especializada em soluções de climatização,
+                    atuando em toda a Grande SP. Contamos com técnicos certificados
+                    pelos principais fabricantes do mercado e um compromisso inabalável com
+                    a qualidade e a satisfação dos nossos clientes.
+                </p>
+                <ul class="about__list">
+                    <li>🏅 Técnicos certificados INMETRO</li>
+                    <li>🔁 Garantia de 6 meses em serviços</li>
+                    <li>📦 Peças e refrigerantes originais</li>
+                    <li>🕐 Atendimento de segunda a sábado</li>
+                    <li>🚐 Atendemos toda a Grande SP</li>
+                </ul>
+                <a href="https://wa.me/5511961056924?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20ar%20condicionado." target="_blank" class="btn btn--whatsapp">
+                    <img src="static/img/whatsapp.svg" alt="WhatsApp" width="20" />
+                    Fale com a gente
+                </a>
+            </div>
+            <div class="about__stats">
+                <div class="stat-card">
+                    <span class="stat-card__number">5.000+</span>
+                    <span class="stat-card__label">Clientes Atendidos</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-card__number">10+</span>
+                    <span class="stat-card__label">Anos de Experiência</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-card__number">98%</span>
+                    <span class="stat-card__label">Clientes Satisfeitos</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-card__number">15min</span>
+                    <span class="stat-card__label">Tempo Médio de Resposta</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="section testimonials" id="depoimentos">
+        <div class="container">
+            <div class="section__header">
+                <h2>O que nossos clientes dizem</h2>
+                <p>Mais de 5.000+ clientes satisfeitos em toda a Grande SP</p>
+            </div>
+            <div class="testimonials__grid">
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">
+                    ⭐⭐⭐⭐⭐
+                    </div>
+                    <p>Serviço excelente! A equipe chegou no horário marcado, foi super profissional e o preço foi justo. Recomendo!</p>
+                    <div class="testimonial-card__author">
+                    <div class="author-avatar">C</div>
+                        <div>
+                            <strong>Carlos Mendes</strong>
+                            <span>Paulista, SP</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">
+                    ⭐⭐⭐⭐⭐
+                    </div>
+                    <p>Fizeram a instalação de 3 aparelhos na minha loja rapidinho e sem sujeira. Atendimento via WhatsApp muito prático.</p>
+                    <div class="testimonial-card__author">
+                    <div class="author-avatar">A</div>
+                        <div>
+                            <strong>Ana Paula Lima</strong>
+                            <span>Moema, SP</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">
+                    ⭐⭐⭐⭐⭐
+                    </div>
+                    <p>Técnico muito competente, identificou o problema do meu ar na hora. Preço honesto e serviço garantido.</p>
+                    <div class="testimonial-card__author">
+                    <div class="author-avatar">R</div>
+                        <div>
+                            <strong>Roberto Souza</strong>
+                            <span>Santo André, SP</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO / CTA -->
+    <section class="section cta" id="contato">
+        <div class="container cta__inner">
+            <h2>Pronto para ter mais conforto?</h2>
+            <p>
+                Entre em contato agora mesmo via WhatsApp e receba um orçamento
+                gratuito em poucos minutos. Atendemos toda a Grande SP!
+            </p>
+            <a href="https://wa.me/5511961056924?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20ar%20condicionado." target="_blank" class="btn btn--whatsapp btn--lg">
+                <img src="static/img/whatsapp.svg" alt="WhatsApp" width="26" />
+                Chamar no WhatsApp Agora
+            </a>
+            <p class="cta__number">📱 (11) 96105-6924</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__brand">
+                <span class="navbar__logo">❄️ <span>Ale Ar-condicionado</span></span>
+                <p>Especialistas em climatização em São Paulo e Grande SP.</p>
+            </div>
+            <div class="footer__links">
+                <h4>Links</h4>
+                <a href="#servicos">Serviços</a>
+                <a href="#sobre">Sobre nós</a>
+                <a href="#depoimentos">Depoimentos</a>
+                <a href="#contato">Contato</a>
+            </div>
+            <div class="footer__contact">
+                <h4>Contato</h4>
+                <p>📍 São Paulo e Grande SP</p>
+                <p>🕐 Seg – Sab: 08h às 18h</p>
+                <a href="https://wa.me/5511961056924?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20ar%20condicionado." target="_blank" class="btn btn--whatsapp btn--sm">
+                    <img src="static/img/whatsapp.svg" alt="WhatsApp" width="18" />
+                    (11) 96105-6924
+                </a>
+            </div>
+        </div>
+        <p class="footer__copy">© 2014 Ale Ar-condicionado — Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Botão flutuante WhatsApp -->
+    <a href="https://wa.me/5511961056924?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20ar%20condicionado." target="_blank" class="whatsapp-float" aria-label="Falar no WhatsApp">
+        <img src="static/img/whatsapp.svg" alt="WhatsApp" width="32" />
+    </a>
+
+    <script src="static/js/main.js"></script>
+</body>
+</html>
