@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ company.name }} — Instalação e Manutenção em {{ company.city }}</title>
+    <meta name="description" content="{{ company.name }}: especialistas em instalação, manutenção e higienização de ar condicionado em {{ company.city }}. Atendimento rápido via WhatsApp." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container navbar__inner">
+            <a href="#" class="navbar__logo">
+                ❄️ <span>{{ company.name }}</span>
+            </a>
+            <nav class="navbar__links">
+                <a href="#servicos">Serviços</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#depoimentos">Depoimentos</a>
+                <a href="#contato">Contato</a>
+            </nav>
+            <a href="{{ whatsapp_url }}" target="_blank" class="btn btn--whatsapp navbar__cta">
+                <img src="{{ url_for('static', filename='img/whatsapp.svg') }}" alt="WhatsApp" width="20" />
+                Falar no WhatsApp
+            </a>
+            <button class="navbar__toggle" onclick="toggleMenu()">&#9776;</button>
+        </div>
+        <nav class="navbar__mobile" id="mobileMenu">
+            <a href="#servicos" onclick="toggleMenu()">Serviços</a>
+            <a href="#sobre" onclick="toggleMenu()">Sobre</a>
+            <a href="#depoimentos" onclick="toggleMenu()">Depoimentos</a>
+            <a href="#contato" onclick="toggleMenu()">Contato</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero__bg"></div>
+        <div class="container hero__content">
+            <p class="hero__tag">📍 Atendemos toda a {{ company.region }}</p>
+            <h1 class="hero__title">
+                Ar Condicionado com<br />
+                <span>Qualidade e Rapidez</span>
+            </h1>
+            <p class="hero__subtitle">
+                Instalação, manutenção, higienização e recarga de gás.<br />
+                Técnicos certificados, atendimento ágil e preço justo.
+            </p>
+            <div class="hero__actions">
+                <a href="{{ whatsapp_url }}" target="_blank" class="btn btn--whatsapp btn--lg">
+                    <img src="{{ url_for('static', filename='img/whatsapp.svg') }}" alt="WhatsApp" width="24" />
+                    Solicitar Orçamento Grátis
+                </a>
+                <a href="#servicos" class="btn btn--outline btn--lg">Ver Serviços</a>
+            </div>
+            <div class="hero__badges">
+                <div class="badge">✅ Resposta em até {{ company.response }}</div>
+                <div class="badge">✅ Garantia nos serviços</div>
+                <div class="badge">✅ Mais de {{ company.clients }} clientes</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="section services" id="servicos">
+        <div class="container">
+            <div class="section__header">
+                <h2>Nossos Serviços</h2>
+                <p>Soluções completas em climatização para residências e empresas</p>
+            </div>
+            <div class="services__grid">
+                {% for service in services %}
+                <div class="service-card">
+                    <div class="service-card__icon">{{ service.icon }}</div>
+                    <h3>{{ service.title }}</h3>
+                    <p>{{ service.description }}</p>
+                    <a href="{{ whatsapp_url }}" target="_blank" class="service-card__link">
+                        Solicitar →
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="section about" id="sobre">
+        <div class="container about__inner">
+            <div class="about__text">
+                <p class="section__tag">Sobre nós</p>
+                <h2>Mais de {{ company.experience }} anos cuidando do seu conforto em SP</h2>
+                <p>
+                    A <strong>{{ company.name }}</strong> é uma empresa especializada em soluções de climatização,
+                    atuando em toda a {{ company.region }}. Contamos com técnicos certificados
+                    pelos principais fabricantes do mercado e um compromisso inabalável com
+                    a qualidade e a satisfação dos nossos clientes.
+                </p>
+                <ul class="about__list">
+                    <li>🏅 Técnicos certificados INMETRO</li>
+                    <li>🔁 Garantia de 6 meses em serviços</li>
+                    <li>📦 Peças e refrigerantes originais</li>
+                    <li>🕐 Atendimento de segunda a sábado</li>
+                    <li>🚐 Atendemos toda a Grande SP</li>
+                </ul>
+                <a href="{{ whatsapp_url }}" target="_blank" class="btn btn--whatsapp">
+                    <img src="{{ url_for('static', filename='img/whatsapp.svg') }}" alt="WhatsApp" width="20" />
+                    Fale com a gente
+                </a>
+            </div>
+            <div class="about__stats">
+                <div class="stat-card">
+                    <span class="stat-card__number">{{ company.clients }}</span>
+                    <span class="stat-card__label">Clientes Atendidos</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-card__number">{{ company.experience }}</span>
+                    <span class="stat-card__label">Anos de Experiência</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-card__number">{{ company.satisfaction }}</span>
+                    <span class="stat-card__label">Clientes Satisfeitos</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-card__number">{{ company.response }}</span>
+                    <span class="stat-card__label">Tempo Médio de Resposta</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="section testimonials" id="depoimentos">
+        <div class="container">
+            <div class="section__header">
+                <h2>O que nossos clientes dizem</h2>
+                <p>Mais de {{ company.clients }} clientes satisfeitos em toda a {{ company.region }}</p>
+            </div>
+            <div class="testimonials__grid">
+                {% for t in testimonials %}
+                <div class="testimonial-card">
+                    <div class="testimonial-card__stars">
+                    {% for i in range(t.stars) %}⭐{% endfor %}
+                    </div>
+                    <p>{{ t.text }}</p>
+                    <div class="testimonial-card__author">
+                    <div class="author-avatar">{{ t.name[0] }}</div>
+                        <div>
+                            <strong>{{ t.name }}</strong>
+                            <span>{{ t.location }}</span>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO / CTA -->
+    <section class="section cta" id="contato">
+        <div class="container cta__inner">
+            <h2>Pronto para ter mais conforto?</h2>
+            <p>
+                Entre em contato agora mesmo via WhatsApp e receba um orçamento
+                gratuito em poucos minutos. Atendemos toda a {{ company.region }}!
+            </p>
+            <a href="{{ whatsapp_url }}" target="_blank" class="btn btn--whatsapp btn--lg">
+                <img src="{{ url_for('static', filename='img/whatsapp.svg') }}" alt="WhatsApp" width="26" />
+                Chamar no WhatsApp Agora
+            </a>
+            <p class="cta__number">📱 {{ company.phone }}</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__brand">
+                <span class="navbar__logo">❄️ <span>{{ company.name }}</span></span>
+                <p>{{ company.tagline }}</p>
+            </div>
+            <div class="footer__links">
+                <h4>Links</h4>
+                <a href="#servicos">Serviços</a>
+                <a href="#sobre">Sobre nós</a>
+                <a href="#depoimentos">Depoimentos</a>
+                <a href="#contato">Contato</a>
+            </div>
+            <div class="footer__contact">
+                <h4>Contato</h4>
+                <p>📍 {{ company.city }} e {{ company.region }}</p>
+                <p>🕐 {{ company.hours }}</p>
+                <a href="{{ whatsapp_url }}" target="_blank" class="btn btn--whatsapp btn--sm">
+                    <img src="{{ url_for('static', filename='img/whatsapp.svg') }}" alt="WhatsApp" width="18" />
+                    {{ company.phone }}
+                </a>
+            </div>
+        </div>
+        <p class="footer__copy">© {{ company.founded }} {{ company.name }} — Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Botão flutuante WhatsApp -->
+    <a href="{{ whatsapp_url }}" target="_blank" class="whatsapp-float" aria-label="Falar no WhatsApp">
+        <img src="{{ url_for('static', filename='img/whatsapp.svg') }}" alt="WhatsApp" width="32" />
+    </a>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
