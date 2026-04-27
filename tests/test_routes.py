@@ -19,7 +19,7 @@ class TestIndexPage:
     def test_titulo_empresa_presente(self, client):
         """Nome da empresa deve aparecer na página."""
         response = client.get("/")
-        assert b"ClimaMax" in response.data
+        assert Config.COMPANY["name"].encode() in response.data
 
     def test_localizacao_sao_paulo(self, client):
         """Referência a São Paulo deve estar na página."""
