@@ -34,8 +34,10 @@
 .
 ├── run.py              # Servidor de desenvolvimento
 ├── freeze.py           # Geração do site estático
-├── requirements.txt
-├── pytest.ini
+├── pyproject.toml      # Dependências e configuração do projeto
+├── .github/
+│   └── workflows/
+│       └── deploy.yml  # CI/CD GitHub Actions
 ├── tests/
 │   ├── conftest.py
 │   ├── test_config.py
@@ -92,7 +94,7 @@ python -m venv .venv
 source .venv/bin/activate      # Linux/Mac
 .venv\Scripts\activate         # Windows
 
-pip install -r requirements.txt
+pip install ".[dev]"
 ```
 
 ### 2. Servidor de desenvolvimento
