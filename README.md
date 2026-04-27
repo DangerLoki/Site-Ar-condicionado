@@ -219,5 +219,3 @@ O projeto pode ser publicado em:
 * Os dados da empresa foram centralizados em `src/config.py` para facilitar manutenção.
 * O deploy estático reduz custo, complexidade e necessidade de infraestrutura.
 * Os testes foram adicionados para validar rotas, configuração e renderização dos principais elementos da página.
-
----
