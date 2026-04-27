@@ -2,9 +2,9 @@
 
 > Site institucional de divulgação para empresa de ar-condicionado, desenvolvido com **Flask + Frozen-Flask** gerando um site 100% estático pronto para deploy em qualquer CDN ou hospedagem estática.
 
----
-
 ## 🖥️ Preview
+
+![Preview do site](docs/assets/preview.gif)
 
 | Seção | Descrição |
 |---|---|
